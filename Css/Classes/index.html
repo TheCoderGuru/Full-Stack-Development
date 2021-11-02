@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>My Website</title>
+
+	<h1 id="title">A Heading</h1>
+
+	<p>Some text</p>
+
+	<h1>Another heading</h1>
+
+	<h2 class="active-class">A Subheading.</h2>
+
+	<!-- <p id="sometext">This is meant to be cool</p> -->
+
+	<a href="http://www.google.com" id="google-link">Click Here to go to Google</a>
+
+	<ul>
+		<li>List 1</li>
+		<ol><li>My numbered list item</li></ol>
+		<li>List 2</li>
+		<li>List 3</li>
+	</ul>
+
+	<ul>
+		<li>List 4</li>
+		<li>List 5</li>
+		<li>List 6</li>
+	</ul>
+
+	<ul>
+		<li>List 7</li>
+		<li>List 8</li>
+	</ul>
+
+	<form>
+		<input type="text" placeholder="Full Name">
+		<input type="email" placeholder="Email">
+		<textarea></textarea>
+		<button>Submit</button>
+	</form>
+
+	<img src="images/bird.jpg" alt="Image showing a hummingbird perched on a tree branch">
+	<img src="images/mushrooms.jpg" alt="Image showing a mushroom spore">
+
+	<!-- CSS Selectors
+
+	Selectors are ways of grabbing and manipulating HTML.
+
+	There are many different ways to select however they all turn out the same way.
+
+	Different selectors have different applications. -->
+
+
+	<!-- The Element Selector 
+
+	You can select entire elements without special characters
+
+	This applies to all of the elements with that tag on the page.
+
+	It ranks on the bottom of the specificity scale. -->
+
+
+	<!-- The Class Selector 
+
+	This is used to select elements with a certain class name.
+
+	Can be used on any and all elements with that class
+
+	Can be used multiple times and is select with the . symbol. -->
+
+
+	<!-- The ID Selector
+
+	This is used to select elements with a certain ID name.
+
+	Can be used on any and all elements with that ID.
+
+	Unlike classes, it can only be used on one element at a time, and is selected with the # symbol. However, it is possible to use more than once. -->
+
+
+<!-- 	What is Specificity?
+
+	If there are two or more conflicting CSS rules that point to the same element, the browser follows some rules determine which one is more specific and therefore wins out.
+
+	Specificity Hierarchy
+
+	Every selector has its place in the specificity hierarchy. There are four categories which define specificity level of a selector:
+
+	Inline Styles - An inline style is attached directly to the element to be styled. Example: <h1 style='color: #ffffff;'>
+
+	IDs - An ID is a unique identifier for the page elements, such as #navbar
+
+
+	Classes, attributes and pseudo-classes - This category incluses .classes, [attributes] and pseudo-classes such as :hover, :focus etc.
+
+
+	Elements and pseudo elements - This category includes elements names and pseudo-elements such as h1, div, :before and :after.
+
+	
+	How to Calculate Specificity?
+
+	Start at 0, add 1000 for style attribute, add 100 for each ID, add 10 for each attribute, class or pseudo-class, add 1 for each element name or pseudo-element.
+
+	
+	Example
+
+	A: h1
+	B: #content h1
+	C: <div id="content"><h1 style="color: #ffffff">Heading</h1></div>
+
+
+	The specificity of A is 1 (one element)
+	The specificity of B is 101 (one reference and one element)
+	The specificity of C is 1000 (inline styling)
+
+	Since 1 < 101 < 1000, the third rule (C) has a greater level of specifity and therefore will be applied.
+	
+
+	Specificity Rules
+
+
+	Equal Specificity: the latest rule counts - If the same rule is written twice into the external style sheet, then the lowest rule in the style sheet is closer to the element to be styled, and therefore will be applied.
+
+	Example
+
+	h1 {background-color: yellow;}
+	h1 {background-color: red;}
+
+
+	ID selectors have a higher specificity than attribute selectors
+
+	div#a {background-color: green}
+	#a {background-color: yellow}
+	div[id=a] {background-color: blue}
+
+
+	The first rule is more specific than the other two, and will be applied.
+
+
+	Contextual selectors are more specific than a single element selector - The embedded style sheet is closer to the element to be styled. So in the following situation 
+
+	From external CSS file:
+
+	#content h1 {background-color: red}
+
+
+	In HTML file:
+
+	<style>
+	#content h1{
+		background-color: yellow;
+	}
+
+
+	A class selector beats any number of element selectors - a class selector such as .intro beats h1, p, div, etc:
+
+	.intro {background-color: yellow;}
+	h1 {background-color: red;}
+	
+
+
+	Pseudo-selectors 
+
+	A pseudo-class is a selector that selects elements that are in a specific stat, e.g. they are the first element of their type, or they are being hovered over by the mouse pointer.
+
+	
+	:first-child
+
+	This represent the first element among the group of sibling elements
+
+
+	:last-child
+
+	This represents the last element among the group of sibling elements.
+
+
+	:nth-child()
+
+	This matches elements based on their position in a group of siblings.
+
+
+	:only-child
+
+	This represents an element without any siblings. This is the same as :first-child, :last-child or nth-child(1), :nth-last-child(1), but with a lower specificity.
+	
+	:nth-last-child()
+
+	This matches elements based on their position among a group of siblings counting from the end.
+
+	:nth-last-of-type()
+
+	This is specified with a single argument, which represents the pattern for matching elements, counting from the end.
+
+	:link
+
+	This represents an element that has not yet been visited. It matches every unvisited <a> or <area> element that has an href attribute.
+
+	:visited
+	
+	This represents links that the user has already visited. For privacy reasons, the styles that can be modified using this selector are very limited.
+
+	:hover
+
+	This is generally triggered when the user hovers over an element with the cursor (mouse pointer).
+
+	
+	Attribute Selectors 
+
+	The CSS attribute selector matches elements based on the presence or value of a given attribute.
+	
+
+	Properties
+
+	This defines the way how css is used.
+
+
+	CSS Rules 
+
+	The CSS Syntax consists of a set of rules. These rules have 3 parts: a selector, a property, and a value.
+
+	
+
+	Types of Units 
+
+	Pixel - This is defined to be small but visible and such that a horizontal 1px wide can be displyed with sharp edges (no anti aliasing).
+
+	Point - This is a useless measure for anything that is rendered on a device which doesnt calculate the DPI correctly. This makes it a reasonable choice for printing and a dreadful choice for use on screen.
+
+ 	 -->
+
+
+</head>
+<body>
+
+</body>
+</html>
