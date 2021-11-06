@@ -688,7 +688,7 @@ console.log( sum( 1, 2, 3, 4 ) );
 
 // use the spread operator to evaluate the args all in one place.
 
-const arr1 = [ 'Jan', 'Feb', 'Mar', 'Apr' ];
+const arr1 = [ 'JAN', 'FEB', 'MAR', 'APR', 'MAY' ];
 let arr2;
 ( function() {
     arr2 = [ ...arr1 ];
@@ -696,3 +696,124 @@ let arr2;
 })();
 
 console.log( arr2 );
+
+
+
+// Use destructuring assignment to assign variables from objects
+
+var voxel = { x: 3.6, y: 7.4, z: 6.54 };
+
+var x = voxel.x;
+
+var y = voxel.y;
+
+var z = voxel.z;
+
+const { x : p, y : q, z : r } = voxel;
+
+
+const AVG_TEMPERATURES = {
+  today: 77.5,
+  tomorrow: 79
+};
+
+
+function getTempOfTmrw( avgTemperatures ){
+  "use strict";
+
+  const { tomorrow : tempOfTomorrow } = avgTemperatures;
+
+  return tempOfTomorrow;
+
+
+  console.log( getTempOfTmrw( AVG_TEMPERATURES ) );
+
+}
+
+// Destructuring assignment with nested objects
+
+const LOCAL_FORECAST = {
+  today: { min: 72, max: 83 },
+  tomorrow: { min: 73.3, max: 84.6 }
+};
+
+function getMaxOfTmrw( forecast ){
+  "use strict";
+
+  const { tomorrow : { max : maxOfTomorrow } } = forecast;
+
+  return maxOfTomorrow;
+}
+
+console.log( getMaxOfTmrw( LOCAL_FORECAST ) );
+
+
+// Use destructuring assignment to assign variables from arrays
+
+const [ w, o, , m ] = [ 1, 2, 3, 4, 5, 6 ];
+
+console.log( w, o, m );
+
+
+let f = 8, g = 6;
+(() => {
+  "use strict";
+  [ f, g ] = [ g, f ]
+})();
+
+
+console.log( f );
+console.log( g );
+
+
+// Destructuring assignment with the rest operator to reassign array elements
+
+
+const source = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+
+function removeFirstTwo( list ){
+
+  const [ , , ...arr ] = list;
+
+  return arr;
+}
+
+const arr = removeFirstTwo( source );
+
+console.log( arr );
+
+console.log( source );
+
+
+// Use destructuring assignment to pass an object as a function's parameters.
+
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+const half = ( function(){
+  return function half( { max, min } ){
+    return ( max + min ) / 2.0;
+  };
+
+})();
+
+console.log( stats );
+console.log( half( stats ) );
+
+// create strings using template literals
+
+const person = {
+  name: "Zodiac Hasbro",
+  age: 86
+};
+
+const greeting = `Hello my name is ${person.name}! I am ${person.age} years old.`;
+
+console.log( greeting );
