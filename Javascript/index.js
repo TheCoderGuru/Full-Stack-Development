@@ -856,3 +856,18 @@ const bicycle = {
 
 bicycle.setGear( 3 );
 console.log( bicycle.gear );
+
+// use class syntax to define a constructor function
+
+class SpaceShuttle {
+    constructor( targetPlanet ){
+
+    this.targetPlanet = targetPlanet;
+  }
+}
+
+
+var zeus = new SpaceShuttle( 'Jupiter' );
+
+console.log( zeus.targetPlanet )
+

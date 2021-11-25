@@ -1,1 +1,4 @@
-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
+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
+
+
+.git - gitdir: ../../../.git/modules/generators/app/templates
