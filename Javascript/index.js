@@ -871,3 +871,4 @@ var zeus = new SpaceShuttle( 'Jupiter' );
 
 console.log( zeus.targetPlanet )
 
+// Until next time
