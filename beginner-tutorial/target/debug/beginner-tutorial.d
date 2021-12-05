@@ -1,1 +1,0 @@
-/home/thecoderguru/beginner-tutorial/target/debug/beginner-tutorial: /home/thecoderguru/beginner-tutorial/src/data_types.rs /home/thecoderguru/beginner-tutorial/src/functions.rs /home/thecoderguru/beginner-tutorial/src/main.rs /home/thecoderguru/beginner-tutorial/src/variables.rs
