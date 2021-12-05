@@ -1,0 +1,94 @@
+p{
+	color: red;
+}
+
+h2[class=aclass]{ /*Styles a h2 based on the attribute aclass */
+	color: blue;
+}
+
+#sometext{
+	color:  orange;
+}
+
+p:hover{
+	color:  blue;
+	transition: ease-out 0.5s;
+}
+/*
+li:nth-child(2){
+	color:  steelblue;
+}*/
+
+/*li:first-child{
+	color: pink;
+}*/
+
+/*li:nth-last-child(2){
+	color:  purple;
+}*/
+
+/*li:only-child{
+	color: red;
+}
+*/
+/*li:nth-last-of-type(2){
+	color: gray;
+}*/
+
+/*#google-link:link{
+	color: blue;
+}
+
+#google-link:visited{
+	color: red;
+}*/
+
+h2 + a{ /* Styles every anchor tag that follows an h2 */
+	color: green;
+}
+
+textarea ~ button{ /* Styles every button that is after a textarea but they are in the same parent. */
+	color: tomato;
+}
+
+ul > li { /*This means every single li inside of a ul*/
+	color: lightcoral;
+}
+
+ul li { /*The li is the child of the ol which is a child of the ul*/
+	color: green;
+}
+
+img[src^="images/"]{ /* Styles any image where the source starts with the text specified in the quotes */
+	height: 340px;
+	width: 340px;
+	border: 1px solid black;
+}
+
+img[src$="images/"]{ /* Styles an image where the source ends in the value specified in the double quotes. */
+	border: 2px solid blue;
+}
+
+img[src$="images/"]{ /* Styles an image where the source contains the value specified in the double quotes. */
+	border-style: dashed;
+}
+
+h2[class~=active-class]{
+	background-color: lightgreen;
+}
+
+h2[class|=active-class]{ /* Select and style elements, where the h2 class attribute's value starts with "active-class" or is preceded by a hyphen such as "active-class-one" */
+	background-color: lightblue;
+}
+
+#title{
+	color: rgb(200, 188, 135);
+}
+body{
+	background: rgba(204, 229, 255, 0.4); /* sets the background opacity to 0.4 which is 40 percent opacity. */
+	font-size: 1cm;
+}
+
+#google-link{
+	text-decoration: underline;
+}
