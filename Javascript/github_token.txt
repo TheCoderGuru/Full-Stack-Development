@@ -1,0 +1,4 @@
+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
+
+
+.git - gitdir: ../../../.git/modules/generators/app/templates

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Understanding Classes</title>
+    <link rel="stylesheet" href="/css/master.css">
+  </head>
+  <body>
+    <h2>Using the class attribute</h2>
+
+    <!-- The class attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript to access and manipulate elements with the specific class name.
+
+    In the following example we have three <div> elements with a class attribute with the value of "city". All of the three <div> elements will be styled equally according to the .city style definition in the head section. -->
+
+    <div class="city">
+      <h2>London</h2>
+      <p>London is the capital of England.</p>
+    </div>
+
+    <div class="city">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p>
+    </div>
+
+    <div class="city">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the captial of Japan</p>
+    </div>
+
+
+    <!-- In the following example we have two <span> elements with a class attribute with the value of "note". Both <span> elements will be styled equally according to the .note style definition in the head section. -->
+
+    <h1>My <span class="note">Important</span>Heading</h1>
+    <p>This is some <span class="note">Important</span>text.</p>
+
+
+    <!-- The Syntax For Classes
+
+    To create a class; write a period (.) character, followed by a class name. Then define the CSS properties within curly braces {}. -->
+
+    <h2 class="city">London</h2>
+    <p>London is the capital of England</p>
+
+    <h2 class="city">Paris</h2>
+    <p>Paris is the capital of France</p>
+
+    <h2 class="city">Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+
+    <h2>Multiple Classes</h2>
+
+    <!-- HTML elements can belong to more than one class.
+
+    To define multiple classes, separate the class names with a space eg <div class="city main">. The element will be styled according to the all the classes specified.
+
+    In the following example, the first <h2> element belongs to both the city class and also the main class and will get the CSS styles from both of the classes. -->
+
+    <p>Here, all the three h2 elements belongs to the "city" class. In addition, London also belongs to the "main" class which center aligns the text.</p>
+
+    <h2 class="city main">London</h2>
+    <h2 class="city">Paris</h2>
+    <h2 class="city">Tokyo</h2>
+
+    <h2>Different Elements can share same class</h2>
+
+    <!-- Different HTML elements can point to the same class name.
+
+    In the following example, both the <h2> and <p> points to the "city" class and will share the same style. -->
+
+    <p>Even if the two elements do not have the same tag name, they can both point to the same class, and get the same CSS styling.</p>
+
+    <h2 class="city">Paris</h2>
+    <p class="city">Paris is the capital of France.</p>
+
+    <h2>Use of the class attribute in JavaScript</h2>
+
+    <!-- The class name can also be used by JavaScript to perform certain tasks for specific elements.
+    JavaScript can access elements with a specific class name with the getElementsByClassName() method: -->
+  </body>
+</html>
